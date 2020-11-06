@@ -1,4 +1,5 @@
 import 'package:Covid19/ui/splash.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {

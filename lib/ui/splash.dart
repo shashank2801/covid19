@@ -1,6 +1,4 @@
 import 'dart:async';
-
-import 'package:Covid19/ui/dashboard_screen.dart';
 import 'package:Covid19/ui/data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
@@ -29,7 +27,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin{
 
     //splashscreen 
     Timer(Duration(seconds: 2),
-            ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard())) //route to next page
+            ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => Data())) //route to next page
             );
   }
 

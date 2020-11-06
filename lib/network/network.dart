@@ -11,7 +11,7 @@ class Network{
 
     if(response.statusCode == 200){
 
-      return json.decode(response.body);
+      return resource.fromJson(json.decode(response.body));
     }
     else{
       print('Failed Loading');
