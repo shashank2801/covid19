@@ -52,7 +52,7 @@ class _DataState extends State<Data> {
                           Text("District Wise \n Statistics",style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300),)
                         ],
                       ),
-                      Image(image: AssetImage('assets/images/corona1.png'),height: 275.0,width: 180.0,)
+                      Image(image: AssetImage('images/corona1.png'),height: 275.0,width: 180.0,)
                     ],
                   ),
             

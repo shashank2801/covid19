@@ -1,3 +1,5 @@
+import 'package:Covid19/ui/dashboard_screen.dart';
+import 'package:Covid19/ui/protectionScreen.dart';
 import 'package:Covid19/ui/splash.dart';
 
 import 'package:flutter/material.dart';
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
        // canvasColor: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Splash(),
+      home: Dashboard(),
     );
   }
 }

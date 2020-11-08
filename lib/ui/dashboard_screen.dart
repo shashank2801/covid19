@@ -10,31 +10,57 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(height: 40),
-            Container(
-              child: Row(
+        body: SafeArea(
+                  child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height*.3,
+                child: Image(image: AssetImage('images/corona2.jpg'),),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height*0.045,),
+              Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image(image: AssetImage('assets/images/corona1.png',),height: 100,),
+                    Image(image: AssetImage('images/corona1.png',),height: MediaQuery.of(context).size.width*.35,),
                     Column(
                       children: [
-                        Text("Corona Virus | COVID 19",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
-                        Text("Stay Home | Stay Safe",style: TextStyle(fontStyle: FontStyle.italic),)
+                        Text("Stay Home\nStay Safe",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35),)
                       ],
                     ),
                   ],
                 ),
-            ),
-            SizedBox(height:10),
-            Divider(height: 5,),
-            RaisedButton(onPressed:()=>Navigator.push(context, MaterialPageRoute(builder: (context) => Data())))       
-          ],
+              SizedBox(height: MediaQuery.of(context).size.height*0.045,),
+              Text("Symptoms:-",style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold,),),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children:[
+                    for(int i=1;i<=6;i++)
+                      symptomCard(context,"images/symptoms-$i.jpg"),
+                  ]
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height*0.045,),
+              RaisedButton(onPressed:()=>Navigator.push(context, MaterialPageRoute(builder: (context) => Data())),child: Text("Click to Continue"),)       
+            ],
+          ),
+      ),
         ),
+    );
+  }
+
+
+  Widget symptomCard(BuildContext context, String imgUrl){
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Card(
+
+        child: Image(image: AssetImage(imgUrl),height: MediaQuery.of(context).size.height*.2,),
+        elevation: 14.0,
       ),
     );
   }
