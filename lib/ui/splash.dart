@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:Covid19/ui/data.dart';
+import 'package:Covid19/ui/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 
@@ -27,7 +28,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin{
 
     //splashscreen 
     Timer(Duration(seconds: 2),
-            ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => Data())) //route to next page
+            ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage())) //route to next page
             );
   }
 
@@ -49,7 +50,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin{
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Image(
-                        image: AssetImage('assets/images/corona1.png'), //image
+                        image: AssetImage('images/corona1.png'), //image
                         height: animation.value,
                         width: animation.value,
                         

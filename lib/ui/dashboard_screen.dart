@@ -34,6 +34,7 @@ class _DashboardState extends State<Dashboard> {
                 ),
               SizedBox(height: MediaQuery.of(context).size.height*0.045,),
               Text("Symptoms:-",style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold,),),
+              SizedBox(height: MediaQuery.of(context).size.height*0.035,),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -44,8 +45,7 @@ class _DashboardState extends State<Dashboard> {
                   ]
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height*0.045,),
-              RaisedButton(onPressed:()=>Navigator.push(context, MaterialPageRoute(builder: (context) => Data())),child: Text("Click to Continue"),)       
+//              RaisedButton(onPressed:()=>Navigator.push(context, MaterialPageRoute(builder: (context) => Data())),child: Text("Click to Continue"),)       
             ],
           ),
       ),

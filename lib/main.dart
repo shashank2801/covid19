@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
        // canvasColor: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Dashboard(),
+      home: Splash(),
     );
   }
 }
