@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:Covid19/ui/data.dart';
 import 'package:Covid19/ui/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
@@ -37,9 +36,9 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin{
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          Container(
-            decoration: BoxDecoration(color: Colors.white),
-          ),
+          // Container(
+          //   decoration: BoxDecoration(color: Colors.white),
+          // ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[

@@ -1,5 +1,3 @@
-import 'package:Covid19/ui/dashboard_screen.dart';
-import 'package:Covid19/ui/protectionScreen.dart';
 import 'package:Covid19/ui/splash.dart';
 
 import 'package:flutter/material.dart';
@@ -16,9 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'Corona India Stats',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.light,
+        brightness: Brightness.dark,
         primaryColor: Colors.red,
-       // canvasColor: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Splash(),
